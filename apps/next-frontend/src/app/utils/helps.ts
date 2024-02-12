@@ -14,7 +14,7 @@ export const apiClient = initQueryClient(appsApi, {
     try {
       const result = await axios.request({
         method: method as Method,
-        url: `http://localhost:3033${path}`,
+        url: `http://127.0.0.1:3101${path}`,
         headers,
         data: body,
       });
