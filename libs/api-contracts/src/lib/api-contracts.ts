@@ -7,12 +7,14 @@ export const appsApi = c.router(
   {
     createPost: {
       method: 'POST',
-      path: '/posts',
+      path: '/post-zod-unique',
       responses: {
         201: z.any(),
       },
       body: z.object({
-        title: z.string(),
+        where: z.object({
+          slug: z.string(),
+        }),
       }),
       summary: 'Create a post',
       metadata: { role: 'user' } as const,

@@ -18,8 +18,10 @@ export const Test: React.FC<Props> = () => {
         // await test(data.email);
         mutate({
           body: {
-            title:'test'
+           where: {
+             slug:'test@gmail.com'
           },
+        },
         });
       }
   return (
